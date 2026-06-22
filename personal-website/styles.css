@@ -523,7 +523,7 @@ h3 {
   }
 
   .hero-photo {
-    justify-self: start;
+    justify-self: center;
     width: min(100%, 420px);
   }
 
