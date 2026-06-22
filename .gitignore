@@ -1,0 +1,9 @@
+.DS_Store
+
+# Private job-search source material and generated artifacts.
+AGENTS.md
+Jason_Lin_2025_resume.pdf
+linkedin_profile.pdf
+output/
+resume-optimizer/
+tmp/
