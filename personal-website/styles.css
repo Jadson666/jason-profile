@@ -185,6 +185,54 @@ h3 {
   font-weight: 700;
 }
 
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.feature-card .tag-list {
+  margin-top: 16px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-muted);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 760;
+  line-height: 1.2;
+}
+
+.tag-blue {
+  border-color: rgba(104, 182, 223, 0.44);
+  background: rgba(104, 182, 223, 0.13);
+  color: var(--blue-dark);
+}
+
+.tag-green {
+  border-color: rgba(143, 199, 181, 0.44);
+  background: rgba(143, 199, 181, 0.13);
+  color: #bfe5da;
+}
+
+.tag-gold {
+  border-color: rgba(228, 189, 100, 0.45);
+  background: rgba(228, 189, 100, 0.13);
+  color: #f1d892;
+}
+
+.tag-red {
+  border-color: rgba(217, 134, 121, 0.45);
+  background: rgba(217, 134, 121, 0.13);
+  color: #efb0a6;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -343,6 +391,55 @@ h3 {
   border-top: 4px solid var(--blue);
 }
 
+.product-link {
+  transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+}
+
+.product-link:nth-child(1):hover,
+.product-link:nth-child(1):focus {
+  border-color: rgba(104, 182, 223, 0.72);
+  background: #1a2228;
+  transform: translateY(-2px);
+}
+
+.product-link:nth-child(2):hover,
+.product-link:nth-child(2):focus {
+  border-color: rgba(228, 189, 100, 0.72);
+  background: #211f18;
+  transform: translateY(-2px);
+}
+
+.product-link:nth-child(3):hover,
+.product-link:nth-child(3):focus {
+  border-color: rgba(217, 134, 121, 0.72);
+  background: #221b1b;
+  transform: translateY(-2px);
+}
+
+.product-link:nth-child(4):hover,
+.product-link:nth-child(4):focus {
+  border-color: rgba(143, 199, 181, 0.72);
+  background: #19221f;
+  transform: translateY(-2px);
+}
+
+.product-link:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.product-link:nth-child(2):focus {
+  outline-color: var(--gold);
+}
+
+.product-link:nth-child(3):focus {
+  outline-color: var(--red);
+}
+
+.product-link:nth-child(4):focus {
+  outline-color: var(--green);
+}
+
 .product-card:nth-child(2) {
   border-top-color: var(--gold);
 }
@@ -453,8 +550,14 @@ h3 {
 }
 
 .timeline-item > p,
+.timeline-content > p,
 .education-card p {
   margin: 0;
+}
+
+.timeline-content {
+  display: grid;
+  gap: 12px;
 }
 
 .education-grid {
