@@ -259,6 +259,10 @@ h3 {
   color: #0e171c;
 }
 
+.highlights {
+  color: #e2a30d;
+}
+
 .hero-photo,
 .contact-photo {
   margin: 0;
@@ -489,9 +493,18 @@ h3 {
   padding: 20px;
 }
 
-.skill-list p {
+.skill-list p,
+.skill-list ul {
   margin: 10px 0 0;
   font-size: 0.95rem;
+}
+
+.skill-list ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 14px;
+  padding-left: 18px;
+  color: var(--muted);
 }
 
 .strength-panel {
@@ -709,7 +722,8 @@ h3 {
 
   .product-grid,
   .life-grid,
-  .skill-list {
+  .skill-list,
+  .skill-list ul {
     grid-template-columns: 1fr;
   }
 
