@@ -293,7 +293,8 @@ h3 {
 
 .featured-section,
 .skills-section,
-.education-section {
+.education-section,
+.life-section {
   background: #12181d;
 }
 
@@ -568,6 +569,51 @@ h3 {
   padding: 20px;
 }
 
+.life-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.life-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.life-photo {
+  margin: 0;
+  aspect-ratio: 1.28;
+  overflow: hidden;
+  background: var(--surface-muted);
+}
+
+.life-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badminton-photo img {
+  object-position: 50% 36%;
+}
+
+.life-copy {
+  display: grid;
+  gap: 10px;
+  padding: 18px 20px 20px;
+}
+
+.life-copy p:not(.card-kicker) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .contact-section {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(260px, 0.65fr);
@@ -610,7 +656,8 @@ h3 {
 }
 
 @media (max-width: 1040px) {
-  .product-grid {
+  .product-grid,
+  .life-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -661,6 +708,7 @@ h3 {
   }
 
   .product-grid,
+  .life-grid,
   .skill-list {
     grid-template-columns: 1fr;
   }
